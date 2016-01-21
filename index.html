@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alcohol tester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        color: #444;
+        background-color: #EEEEEE;
+        font-size: 2em;
+      }
+      h1, p, div {
+        text-align: center;
+      }
+      #output {
+        font-size: 6em;
+      }
+      .yes {
+        color: green;
+      }
+      .no {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alcohol tester</h1>
+
+    <p>Am I safe to drive?
+
+    <form id="alcotester" onsubmit="return alcotester()">
+
+      <p><label for="height">You height:</label>
+      <input id="height" type="number" min="1" max="300" required="true"> cm
+
+      <p><label for="weight">Your weight:</label>
+      <input id="weight" type="number" min="1" max="300" required="true"> kg
+
+      <p><label for="units">How much you have had to drink:</label>
+      <input id="units" type="number" min="0" max="100" required="true"> units
+
+      <p>One pint is about two units, a glass of wine about one unit.
+
+      <p><input id="submit" type="submit" />
+    </form>
+
+    <div id="output"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
